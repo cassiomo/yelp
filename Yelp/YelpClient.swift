@@ -1,18 +1,10 @@
-//
-//  YelpClient.swift
-//  Yelp
-//
-//  Created by Timothy Lee on 9/19/14.
-//  Copyright (c) 2014 Timothy Lee. All rights reserved.
-//
-
 import UIKit
 
 // You can register for Yelp API keys here: http://www.yelp.com/developers/manage_api_keys
-let yelpConsumerKey = "vxKwwcR_NMQ7WaEiQBK_CA"
-let yelpConsumerSecret = "33QCvh5bIF5jIHR5klQr7RtBDhQ"
-let yelpToken = "uRcRswHFYa1VkDrGV6LAW2F8clGh5JHV"
-let yelpTokenSecret = "mqtKIxMIR4iBtBPZCmCLEb-Dz3Y"
+let yelpConsumerKey = "Jj9rWPM8EuuaA1yoHETBfQ"
+let yelpConsumerSecret = "For8S4C5U_1vZfwa_rl0Xns8MK4"
+let yelpToken = "pmSSw25zb4bcvsKIJV__SLjD8JPkRFwu"
+let yelpTokenSecret = "e3b3x7UfhHa5Mmq-NnFaSf2dknI"
 
 enum YelpSortMode: Int {
     case BestMatched = 0, Distance, HighestRated
