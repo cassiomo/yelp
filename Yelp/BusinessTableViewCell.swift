@@ -3,7 +3,7 @@
 //  Yelp
 //
 //  Created by Mo, Kevin on 9/26/15.
-//  Copyright © 2015 Timothy Lee. All rights reserved.
+//  Copyright © 2015 Kevin Mo. All rights reserved.
 //
 
 import UIKit
@@ -40,8 +40,14 @@ class BusinessTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         thumbImageView.layer.cornerRadius = 3
         thumbImageView.clipsToBounds = true
+        nameLabel.preferredMaxLayoutWidth = nameLabel.frame.size.width
         
         // Configure the view for the selected state
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        nameLabel.preferredMaxLayoutWidth = nameLabel.frame.size.width
     }
 
 }
