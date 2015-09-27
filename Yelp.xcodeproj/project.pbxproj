@@ -19,7 +19,6 @@
 		BD0DB3B21BB88DD400EBD054 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0DB3B11BB88DD400EBD054 /* FiltersViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		BD9E48B91BB7B14C0016AAB3 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E48B81BB7B14C0016AAB3 /* BusinessTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		BD9E48BB1BB882F00016AAB3 /* FilterSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E48BA1BB882F00016AAB3 /* FilterSwitchTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		BD9E48BF1BB889EA0016AAB3 /* Filters.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E48BE1BB889EA0016AAB3 /* Filters.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +50,6 @@
 		BD0DB3B11BB88DD400EBD054 /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		BD9E48B81BB7B14C0016AAB3 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
 		BD9E48BA1BB882F00016AAB3 /* FilterSwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterSwitchTableViewCell.swift; sourceTree = "<group>"; };
-		BD9E48BE1BB889EA0016AAB3 /* Filters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Filters.swift; sourceTree = "<group>"; };
 		C56EF0CE844A4EE5819C72AF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -148,7 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				22AAAA981AEA0A9700A544AF /* Business.swift */,
-				BD9E48BE1BB889EA0016AAB3 /* Filters.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -326,7 +323,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9E48B91BB7B14C0016AAB3 /* BusinessTableViewCell.swift in Sources */,
-				BD9E48BF1BB889EA0016AAB3 /* Filters.swift in Sources */,
 				22AAAA9C1AEA1EC300A544AF /* BusinessesViewController.swift in Sources */,
 				22AAAA991AEA0A9700A544AF /* Business.swift in Sources */,
 				BD9E48BB1BB882F00016AAB3 /* FilterSwitchTableViewCell.swift in Sources */,

@@ -8,11 +8,19 @@
 
 import UIKit
 
-class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+@objc protocol FiltersViewControllerDelegate {
+    optional func filtersViewController(filtersViewController: FiltersViewController, didUpdateFilters filters: [String:AnyObject])
+}
+
+class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FilterSwitchTableViewCellDelegate {
 
     @IBOutlet weak var filtersTableView: UITableView!
     
     var categories: [[String:String]]!
+    
+    weak var delegate: FiltersViewControllerDelegate?
+    
+    var switchStates = [Int:Bool]()
     
     @IBAction func onCancelButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -20,6 +28,22 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBAction func onSearchButton(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+        
+       var filters = [String: AnyObject]()
+//        
+//        var selectedCategories = [String]()
+//        
+//        for (row, isSelected) in switchStates {
+//            if isSelected {
+//                selectedCategories.append(categories[row]["code"]!)
+//            }
+//        }
+//
+//        if selectedCategories.count > 0 {
+//            filters["categories"] = selectedCategories
+//        }
+        
+        delegate?.filtersViewController?(self, didUpdateFilters: filters)
     }
     
     @IBOutlet weak var onSearchButton: UIBarButtonItem!
@@ -48,7 +72,25 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.categoriesFilterLabel.text = categories[indexPath.row]["name"]
         
+        cell.delegate = self
+        
+//        if switchStates[indexPath.row] !=nil {
+//            cell.categoriesOnSwitch.on = switchStates[indexPath.row]!
+//        } else {
+//            cell.categoriesOnSwitch.on = false
+//        }
+        
+        cell.categoriesOnSwitch.on = switchStates[indexPath.row] ?? false
+        
         return cell
+    }
+    
+    func switchCell(filterSwitchTableViewCell: FilterSwitchTableViewCell, didChangeValue value: Bool) {
+        let indexPath = filtersTableView.indexPathForCell(filterSwitchTableViewCell)!
+        
+        switchStates[indexPath.row] = value
+        
+        print("filters view controller got the switch event")
     }
     
     func yelpCategories() -> [[String:String]] {
