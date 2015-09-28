@@ -10,6 +10,9 @@ enum YelpSortMode: Int {
     case BestMatched = 0, Distance, HighestRated
 }
 
+var lat = "37.777014"
+var lon = "-122.424211"
+
 class YelpClient: BDBOAuth1RequestOperationManager {
     var accessToken: String!
     var accessSecret: String!
@@ -42,6 +45,26 @@ class YelpClient: BDBOAuth1RequestOperationManager {
     
     func searchWithTerm(term: String, completion: ([Business]!, NSError!) -> Void) -> AFHTTPRequestOperation {
         return searchWithTerm(term, sort: nil, categories: nil, deals: nil, completion: completion)
+    }
+    
+    func searchWithTerm(
+        term: String,
+        filters: Dictionary<String, AnyObject>?,
+        success: (AFHTTPRequestOperation!, AnyObject!) -> Void,
+        failure: (AFHTTPRequestOperation!, NSError!) -> Void) -> AFHTTPRequestOperation! {
+            var parameters = [
+                "term": term,
+                "ll": "\(lat),\(lon)",
+            ]
+            if let filters = filters {
+                if let price = filters["price"] as? String {
+                    // Price isn't supported
+                }
+                if let open_now = filters["open_now"] as? Bool {
+                    
+                }
+            }
+            return self.GET("search", parameters: parameters, success: success, failure: failure)
     }
     
     func searchWithTerm(term: String, sort: YelpSortMode?, categories: [String]?, deals: Bool?, completion: ([Business]!, NSError!) -> Void) -> AFHTTPRequestOperation {
