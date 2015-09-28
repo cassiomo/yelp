@@ -1,8 +1,10 @@
 import UIKit
 
-class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, FiltersViewControllerDelegate {
+class BusinessesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, FiltersViewControllerDelegate {
 
     var businesses: [Business]!
+    
+    var searchBar : UISearchBar!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -13,6 +15,11 @@ class BusinessesViewController: UIViewController, UITableViewDataSource, UITable
         self.tableView.dataSource = self
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 120
+        
+        self.searchBar = UISearchBar()
+        self.searchBar.delegate = self
+        self.searchBar.placeholder = "eg. chinese food, burger"
+        self.navigationItem.titleView = self.searchBar
 
         Business.searchWithTerm("Thai", completion: { (businesses: [Business]!, error: NSError!) -> Void in
             
