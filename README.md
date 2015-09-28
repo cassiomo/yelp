@@ -21,7 +21,7 @@ Required
 
 [x] The filters you should actually have are: category, sort (best match, distance, highest rated), radius (meters), deals (on/off).
 
-[ ]The filters table should be organized into sections as in the mock.
+[x]The filters table should be organized into sections as in the mock.
 
 [x] You can use the default UISwitch for on/off states. Optional: implement a custom switch
 
