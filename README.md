@@ -1,8 +1,12 @@
 This is a Yelp search app using the Yelp API.
 
-Time spent: <Number of hours spent>
+Time spent: 17 hours 
 
 Features
+
+Spend 3 hours to try to set up the filter page. 6 hours to follow the exercise program and video. 2 hours on the search bar. Spend another 3 hours to research the how to make the section work in the tableview. 
+Another 3 hours to research on the constraint and learn table view property. 
+
 Required
 
 [x] Search results page
