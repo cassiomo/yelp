@@ -30,18 +30,18 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
         dismissViewControllerAnimated(true, completion: nil)
         
        var filters = [String: AnyObject]()
-//        
-//        var selectedCategories = [String]()
-//        
-//        for (row, isSelected) in switchStates {
-//            if isSelected {
-//                selectedCategories.append(categories[row]["code"]!)
-//            }
-//        }
-//
-//        if selectedCategories.count > 0 {
-//            filters["categories"] = selectedCategories
-//        }
+        
+        var selectedCategories = [String]()
+        
+        for (row, isSelected) in switchStates {
+            if isSelected {
+                selectedCategories.append(categories[row]["code"]!)
+            }
+        }
+
+        if selectedCategories.count > 0 {
+            filters["categories"] = selectedCategories
+        }
         
         delegate?.filtersViewController?(self, didUpdateFilters: filters)
     }
