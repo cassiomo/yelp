@@ -155,7 +155,6 @@
                                             <constraints>
                                                 <constraint firstItem="CGF-Nb-rJ9" firstAttribute="trailing" secondItem="jLx-XK-uq9" secondAttribute="trailingMargin" id="G3j-p0-ufu"/>
                                                 <constraint firstItem="NKq-d3-XDp" firstAttribute="leading" secondItem="jLx-XK-uq9" secondAttribute="leadingMargin" id="VJr-TG-ab4"/>
-                                                <constraint firstItem="CGF-Nb-rJ9" firstAttribute="centerX" secondItem="jLx-XK-uq9" secondAttribute="centerX" id="Z3D-x1-hNf"/>
                                                 <constraint firstItem="NKq-d3-XDp" firstAttribute="centerX" secondItem="jLx-XK-uq9" secondAttribute="centerX" id="gud-xF-E7i"/>
                                             </constraints>
                                         </tableViewCellContentView>
