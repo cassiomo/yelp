@@ -46,3 +46,5 @@ Optional
 [ ] Implement the restaurant detail page.
 
 Walkthrough
+
+![Alt text](https://github.com/cassiomo/yelp/blob/master/yelp.gif "yelp.gif")
