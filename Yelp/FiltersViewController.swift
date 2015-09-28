@@ -51,6 +51,8 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.filtersTableView.rowHeight = UITableViewAutomaticDimension
+        
         categories = yelpCategories()
         
         self.filtersTableView.delegate = self
@@ -61,6 +63,14 @@ class FiltersViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Categories"
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
